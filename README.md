@@ -20,7 +20,6 @@ Registers a new energy consumption record.
 
 **Request body:**
 
-```json
 {
   "deviceId": "device123",
   "consumptionKwh": 5.2,
@@ -85,13 +84,13 @@ Response:
 
    1 - Devices send energy data via POST /api/energy.
 
-   2 - The backend:
+   2 - The backend.
 
-        -> Saves the record to PostgreSQL.
+  - Saves the record to PostgreSQL.
 
-        -> Publishes the data to the Kafka topic energy-data.
+  - Publishes the data to the Kafka topic energy-data.
 
-    3 - External systems (e.g., analytics, alerts) can consume the Kafka topic asynchronously.
+  3 - External systems (e.g., analytics, alerts) can consume the Kafka topic asynchronously.
 
 
 
